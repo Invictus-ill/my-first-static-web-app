@@ -1,0 +1,11 @@
+<div>
+  <h2>Fetch Todo</h2>
+  <label for="todoId">Enter Todo ID:</label>
+  <input id="todoId" type="number" [(ngModel)]="todoId" />
+  <button (click)="fetchTodo()">Fetch Todo</button>
+</div>
+
+<div *ngIf="todo">
+  <h3>Todo Details</h3>
+  <pre>{{ todo | json }}</pre>
+</div>
